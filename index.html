@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Link Catcher</title>
+<meta name="description" content="Tempel teks atau thread berisi link, dapatkan ringkasan, link berlabel, dan tag otomatis.">
+<meta name="theme-color" content="#14201B">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2D94E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+      </div>
+      <div class="brand-name">Smart Link<br>Catcher</div>
+    </div>
+    <nav id="nav" class="nav" aria-label="Filter kartu"></nav>
+    <div class="tags-block">
+      <div class="eyebrow tags-head">Tag</div>
+      <nav id="tagnav" class="nav tagnav" aria-label="Filter tag"></nav>
+    </div>
+    <div class="acct">
+      <div id="acctRow" class="acct-row"></div>
+      <button id="login" class="btn secondary small" type="button">Masuk dengan Google</button>
+      <button id="logout" class="btn ghost small" type="button" hidden>Keluar</button>
+      <button id="install" class="btn ghost small" type="button" hidden>Pasang aplikasi</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="top">
+      <h1>Tempel dulu, rapikan otomatis</h1>
+      <div class="search">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6B64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <label for="q" class="sr">Cari kartu</label>
+        <input id="q" type="search" placeholder="Cari ringkasan, link, atau tag" autocomplete="off">
+      </div>
+    </header>
+
+    <section class="capture" aria-label="Buat kartu baru">
+      <div class="col">
+        <label for="raw" class="eyebrow">Teks mentah</label>
+        <textarea id="raw" class="raw" spellcheck="false" placeholder="Tempel thread, chat, atau artikel di sini. Link akan diambil otomatis."></textarea>
+        <div class="rawmeta">
+          <span>Diproses di perangkat, tanpa dikirim ke server</span>
+          <span id="stat" class="mono"></span>
+        </div>
+        <div class="row">
+          <button id="paste" class="btn secondary" type="button">Tempel dari clipboard</button>
+          <button id="clear" class="btn ghost" type="button">Kosongkan</button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="eyebrow">Pratinjau kartu</div>
+        <article id="preview" class="preview" aria-live="polite"></article>
+      </div>
+    </section>
+
+    <section class="library" aria-label="Pustaka kartu">
+      <div class="libhead">
+        <h2 id="libtitle">Semua kartu</h2>
+        <span id="libcount" class="mono muted"></span>
+      </div>
+      <div id="grid" class="grid"></div>
+    </section>
+  </main>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="engine.js"></script>
+<script src="app.js"></script>
+<script type="module" src="sync.js"></script>
+</body>
+</html>
