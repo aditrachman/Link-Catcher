@@ -182,14 +182,4 @@ git push origin fix/ringkasan-tfidf
 
 ## Lisensi
 
-MIT © 2026 [Muhammad Aditya Rachman](https://github.com/aditrachman)
-
----
-
-## Tentang Pembuat
-
-**Muhammad Aditya Rachman** (NPM: 2405040018)  
-Mahasiswa Teknik Informatika, Universitas Muhammadiyah Magelang (UNIMMA)  
-Asisten Dosen Mata Kuliah Database
-
-Project ini bagian dari portfolio & eksperimen *local-first PWA* tanpa framework berat.
+MIT © 2026 aditrachman
