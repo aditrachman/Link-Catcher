@@ -23,16 +23,19 @@
       </div>
       <div class="brand-name">Smart Link<br>Catcher</div>
     </div>
-    <nav id="nav" class="nav" aria-label="Filter kartu"></nav>
-    <div class="tags-block">
-      <div class="eyebrow tags-head">Tag</div>
-      <nav id="tagnav" class="nav tagnav" aria-label="Filter tag"></nav>
+    <!-- .filters: di desktop "transparan" (display: contents), di mobile jadi satu strip yang bisa digeser -->
+    <div class="filters">
+      <nav id="nav" class="nav" aria-label="Filter kartu"></nav>
+      <div class="tags-block">
+        <div class="eyebrow tags-head">Tag</div>
+        <nav id="tagnav" class="nav tagnav" aria-label="Filter tag"></nav>
+      </div>
     </div>
     <div class="acct">
       <div id="acctRow" class="acct-row"></div>
       <button id="login" class="btn secondary small" type="button">Masuk dengan Google</button>
       <button id="logout" class="btn ghost small" type="button" hidden>Keluar</button>
-      <button id="install" class="btn ghost small" type="button" hidden>Pasang aplikasi</button>
+      <button id="install" class="btn ghost small" type="button" title="Pasang aplikasi" aria-label="Pasang aplikasi" hidden>Pasang</button>
     </div>
   </aside>
 

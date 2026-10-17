@@ -1,5 +1,5 @@
 /* Service worker: network-first untuk file aplikasi, fallback ke cache saat offline. */
-var CACHE = 'slc-v2';
+var CACHE = 'slc-v3';
 var SHELL = ['./', 'index.html', 'style.css', 'engine.js', 'app.js', 'sync.js', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png'];
 
